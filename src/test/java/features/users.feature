@@ -9,8 +9,8 @@ Feature: User Add/Delete Functionality
     And I click on save button
     Then Verify new user is added with username "<username>"
     Examples:
-      | FirstName | LastName | username  | password | customer   | Role  | Email       | CellPhone  |
-      | Shubham   | Deshmukh | sdeshmukh | abc@123  | Company AAA | Admin | 123@abc.com | 9999999999 |
+      | FirstName | LastName | username | password | customer    | Role  | Email       | CellPhone  |
+      | shd       | xyz      | shdxyz   | abc@123  | Company AAA | Admin | 123@abc.com | 9999999999 |
 
   @Regression
   Scenario Outline: Delete User Functionality
@@ -19,5 +19,5 @@ Feature: User Add/Delete Functionality
     And I clicked on Ok button
     Then Verify that user "<username>" is not available in table
     Examples:
-      | username  |
-      | testadmin |
+      | username |
+      | novak    |
