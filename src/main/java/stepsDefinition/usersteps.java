@@ -1,5 +1,6 @@
 package stepsDefinition;
 
+import Commons.TestBase;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
@@ -14,7 +15,7 @@ import pages.DashboardUIPage;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class usersteps {
+public class usersteps extends TestBase {
 
     public static WebDriver driver;
 
@@ -26,7 +27,7 @@ public class usersteps {
 
     @Given("^I opened the url$")
     public void user_is_on_homepage() throws Throwable {
-        driver.get("https://www.way2automation.com/angularjs-protractor/webtables/");
+        driver.get(getUrl());
     }
 
     @When("^I clicked on Add User Button$")
